@@ -1,0 +1,37 @@
+[
+  {
+    "role": "SAP S/4HANA Intern",
+    "organisation": "Sword Group",
+    "startDate": "Sept, 2025",
+    "endDate": "Nov, 2025",
+    "experiences": [
+      "SAP S/4HANA Cloud setup and configuration.",
+      "Managed core FI, MM, and SD modules.",
+      "Applied BTP integration and cloud best practices."
+    ],
+    "imageSrc": "history/sword.png"
+  },
+  {
+    "role": "IT Support Intern",
+    "organisation": "LAU",
+    "startDate": "Jan, 2025",
+    "endDate": "Apr, 2025",
+    "experiences": [
+      "Hardware/software troubleshooting and OS deployment.",
+      "Provided real-time technical support to faculty.",
+      "Managed system maintenance and diagnostics."
+    ],
+    "imageSrc": "history/lau.png"
+  },
+  {
+    "role": "Web Dev Intern",
+    "organisation": "Code Alfa",
+    "startDate": "Jun, 2024",
+    "endDate": "Sept, 2024",
+    "experiences": [
+      "Built responsive web apps and interactive UIs.",
+      "Optimized front-end design and interactivity."
+    ],
+    "imageSrc": "history/codealpha.png"
+  }
+]

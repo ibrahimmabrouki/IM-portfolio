@@ -1,0 +1,15 @@
+/* to define variables like font and color and import them to be used in other places */
+:root{
+    /* color */
+    --color-text:#fff;
+    --color-primary: #576cbc;
+    --color-secondary: #19376d;
+    --color-dark: #0b2447;
+    --color-bg: #04152b;
+
+    /* Fonts */
+    --font-roboto: "Roboto";
+    
+
+
+}

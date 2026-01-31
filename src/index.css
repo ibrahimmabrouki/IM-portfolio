@@ -1,0 +1,10 @@
+*{
+  box-sizing: border-box; /*means that border is considered when calculating the heigth and the width of the object*/ 
+  margin: 0;
+  padding: 0;
+  font-family: "outfit", Arial, Helvetica, sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;/*to smooth the scroll when moving between the components*/
+}

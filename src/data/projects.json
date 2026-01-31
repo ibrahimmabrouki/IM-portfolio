@@ -1,0 +1,83 @@
+[
+    {
+      "title": "CarePoint Clinic – Healthcare Management System",
+      "imageSrc": "projects/project.png",
+      "description": "Role-based Android healthcare application with secure authentication, appointment scheduling, prescription management, lab tracking, and real-time messaging. Integrated a PHP/MySQL backend with a custom TCP server for reliable communication.",
+      "skills": ["Android", "Java", "PHP", "MySQL", "TCP", "Backend Development"],
+      "demo": "",
+      "source": "https://github.com/ibrahimmabrouki/CPC_App/tree/Abdullah"
+    },
+    {
+      "title": "Cloud Computing Infrastructure on AWS",
+      "imageSrc": "projects/project.png",
+      "description": "Built a scalable cloud solution using AWS EC2, S3, and RDS with Docker. Implemented auto-scaling and load balancing to ensure high availability and efficient resource utilization.",
+      "skills": ["AWS", "EC2", "S3", "RDS", "Docker", "Cloud Computing"],
+      "demo": "",
+      "source": ""
+    },
+    {
+      "title": "Network File Sharing System (Flask GUI)",
+      "imageSrc": "projects/project.png",
+      "description": "Developed a client-server file sharing system supporting multiple concurrent clients with reliable data transfer and a user-friendly Flask-based graphical interface.",
+      "skills": ["Python", "Flask", "Networking", "Sockets", "Client-Server Architecture"],
+      "demo": "",
+      "source": "https://github.com/Abedsay/File_Sharing_Server"
+    },
+    {
+      "title": "Parallel Programming – CNN Optimization (LeNet-5)",
+      "imageSrc": "projects/project.png",
+      "description": "Optimized and parallelized the LeNet-5 convolutional neural network using MPI, OpenMP, and CUDA C, achieving up to a 13.58× performance speedup for digit classification.",
+      "skills": ["CUDA C", "MPI", "OpenMP", "Parallel Computing", "CNN"],
+      "demo": "",
+      "source": "https://github.com/ibrahimmabrouki/Parallel-Convolutional-Networks"
+    },
+    {
+      "title": "HealthTrack – Personalized Wellness Companion",
+      "imageSrc": "projects/project.png",
+      "description": "Android health monitoring application offering BMI calculation, calorie tracking, and personalized diet recommendations based on user-input health metrics.",
+      "skills": ["Android", "Java", "Mobile Development", "Health Applications"],
+      "demo": "",
+      "source": "https://github.com/ibrahimmabrouki/Mobile"
+    },
+    {
+      "title": "Social Media Networking Web Platform",
+      "imageSrc": "projects/project.png",
+      "description": "Full-stack social media web application with user authentication, post viewing, follow management, and an admin dashboard for managing user profiles.",
+      "skills": ["PHP", "MySQL", "HTML", "CSS", "JavaScript", "Full-Stack Development"],
+      "demo": "",
+      "source": ""
+    },
+    {
+      "title": "Online Veterinary Appointment System",
+      "imageSrc": "projects/project.png",
+      "description": "Designed and developed an online veterinary appointment system with public, veterinary, and admin sections. Followed software engineering methodologies and implemented PHP unit testing to ensure reliability.",
+      "skills": ["PHP", "MySQL", "UML", "Software Engineering", "Unit Testing"],
+      "demo": "",
+      "source": ""
+    },
+    {
+      "title": "Custom Instruction Set Architecture (ISA)",
+      "imageSrc": "projects/project.png",
+      "description": "Designed and implemented a custom instruction set architecture, including register design, instruction formats, operation encoding, and datapath development.",
+      "skills": ["Computer Architecture", "Assembly", "Digital Design", "Low-Level Systems"],
+      "demo": "",
+      "source": ""
+    },
+    {
+      "title": "Database Management System for Civil Defense",
+      "imageSrc": "projects/project.png",
+      "description": "Developed a complete database system using EER modeling, schema mapping, normalization, and secure SQL queries with stored procedures for data analysis.",
+      "skills": ["SQL", "Database Design", "EER Diagrams", "Data Security"],
+      "demo": "",
+      "source": ""
+    },
+    {
+      "title": "Diabetes Risk Prediction – Machine Learning Project",
+      "imageSrc": "projects/project.png",
+      "description": "Machine learning model for diabetes risk prediction using Random Forest (AUC 0.97). Performed data preprocessing, handled class imbalance, and identified key health risk factors such as Polyuria.",
+      "skills": ["Machine Learning", "Python", "Random Forest", "Data Preprocessing"],
+      "demo": "",
+      "source": ""
+    }
+  ]
+  

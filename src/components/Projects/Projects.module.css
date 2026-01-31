@@ -1,0 +1,89 @@
+@import '../../vars.css';
+
+.container{
+    margin-top: 70px;
+    color: var(--color-text);
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.title{
+    padding-top: 30px;
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 1.75px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.sliderWrapper{
+    margin-top: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.projects{
+    overflow: hidden;
+    width: 100%;
+    max-width: 900px;
+}
+
+.sliderTrack{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide{
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.arrow{
+    background: transparent;
+    border: 2px solid var(--color-text);
+    color: var(--color-text);
+    font-size: 22px;
+    padding: 8px 14px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.arrow:hover{
+    transform: scale(1.1);
+}
+
+.arrow:disabled{
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+
+@media screen and (max-width: 830px) {
+
+    .sliderWrapper{
+        flex-direction: column;
+    }
+
+    .arrow{
+        display: none; 
+    }
+
+    .projects{
+        overflow: visible; 
+        max-width: 100%;
+    }
+
+    .sliderTrack{
+        flex-direction: column;
+        transform: none !important; 
+    }
+
+    .slide{
+        min-width: 100%;
+        margin-bottom: 20px;
+    }
+}
