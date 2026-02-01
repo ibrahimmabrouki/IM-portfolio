@@ -17,7 +17,7 @@ export function Experience(){
                             <div key = {id} className={styles.skill}>
                                 <div className={styles.skillImageContainer}>
                                     <img 
-                                    src={`../../assets/${skill.imageSrc}`} 
+                                    src={`/dynamicassets/${skill.imageSrc}`} 
                                     alt={skill.title} 
                                     />
                                 </div>
@@ -31,7 +31,7 @@ export function Experience(){
                         history.map((historyItem, id) =>{
                             return(
                                 <li key = {id} className={styles.historyItem}>
-                                    <img src = {`../../assets/${historyItem.imageSrc}`}
+                                    <img src = {`/dynamicassets/${historyItem.imageSrc}`}
                                     alt = {`${historyItem.organisation} logo`} /> 
                                     <div className={styles.historyItemDetails}>
                                         <h3>{`${historyItem.role}, ${historyItem.organisation}`}</h3>

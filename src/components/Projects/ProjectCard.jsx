@@ -8,7 +8,7 @@ export function ProjectCard({project}){
 
             <img 
             className={styles.image}
-            src = {`../../assets/${project.imageSrc}`} 
+            src = {`/dynamicassets/${project.imageSrc}`} 
             alt = {`Image of ${project.title}`}>
             </img>
 

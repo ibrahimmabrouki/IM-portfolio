@@ -1,5 +1,6 @@
 import React from "react";
 import styles from './Hero.module.css';
+import heroimage from '../assets/hero/heroImage.png';
 
 export function Hero(){
     return(
@@ -19,7 +20,7 @@ export function Hero(){
             </div>
             <img 
             className={styles.heroImg}
-            src = '../assets/hero/heroImage.png' 
+            src = {heroimage} 
             alt = "Image for my self">
 
             </img>

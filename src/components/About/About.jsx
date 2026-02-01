@@ -1,5 +1,12 @@
 import React from "react";
 import styles from './About.module.css';
+import aboutimage from '../../assets/About/aboutImage.png';
+import cursoricon from '../../assets/About/cursorIcon.png';
+import uiIcon from '../../assets/About/uiIcon.png';
+import serverIcon from '../../assets/About/serverIcon.png';
+import mobileIcon from '../../assets/About/mobileIcon.png';
+
+
 export function About(){
     return(
        <section className = {styles.container} id = "about">
@@ -7,12 +14,12 @@ export function About(){
             <div className = {styles.content} >
                 <img
                     className = {styles.aboutImage} 
-                    src = '../../assets/About/aboutImage.png'
+                    src = {aboutimage}
                     alt = "Me sitting with a Laptop">
                 </img>
                 <ul className = {styles.aboutItems} >
                     <li className = {styles.aboutItem} >
-                        <img src = '../../assets/About/cursorIcon.png' 
+                        <img src ={cursoricon}
                         alt = "Cursor pointer icon" ></img>
 
                         <div className = {styles.aboutItemText}>
@@ -23,7 +30,7 @@ export function About(){
                     </li>
 
                     <li className = {styles.aboutItem}>
-                        <img src = '../../assets/About/serverIcon.png' 
+                        <img src = {serverIcon} 
                         alt = "Server icon" ></img>
 
                         <div className = {styles.aboutItemText}>
@@ -35,7 +42,7 @@ export function About(){
                     </li>
 
                     <li className = {styles.aboutItem}>
-                        <img src = '../../assets/About/uiIcon.png' 
+                        <img src = {uiIcon} 
                         alt = "UI icon" ></img>
 
                         <div className = {styles.aboutItemText}>
@@ -46,8 +53,8 @@ export function About(){
                         </div>
                     </li>
                     <li className = {styles.aboutItem}>
-                        <img src = '../../assets/About/mobileIcon.png' 
-                        alt = "UI icon" ></img>
+                        <img src = {mobileIcon}
+                        alt = "mobileIcon icon" ></img>
 
                         <div className = {styles.aboutItemText}>
                             <h3>Mobile Application Development</h3>

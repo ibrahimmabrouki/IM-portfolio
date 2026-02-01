@@ -1,5 +1,10 @@
 import React from "react";
 import styles from './Contact.module.css';
+import emailicon from "../../assets/contact/emailIcon.png";
+import linkedinicon from "../../assets/contact/linkedinicon.png";
+import githubicon from "../../assets/contact/githubicon.png";
+
+
 
 export function Contact(){
     return(
@@ -10,15 +15,15 @@ export function Contact(){
             </div>
             <ul className={styles.links}>
                 <li className={styles.link}>
-                    <img  src="../../assets/contact/emailIcon.png" alt="Email Icon" />
+                    <img  src={emailicon} alt="Email Icon" />
                     <a href = 'mailto:ibrahimmabrouki32@gmail.com'>ibrahimmabrouki32@gmail.com</a>
                 </li>    
                 <li className={styles.link}>
-                    <img  src="../../assets/contact/linkedinIcon.png" alt="LinkedIn Icon" />
+                    <img  src={linkedinicon} alt="LinkedIn Icon" />
                     <a href = 'https://www.linkedin.com/in/ibrahim-mabrouki-70465b266?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'>LinkedIn.com/ibrahimmabrouki</a>
                 </li>    
                 <li className={styles.link}>
-                <img  src="../../assets/contact/githubIcon.png" alt="Github Icon" />
+                <img  src={githubicon} alt="Github Icon" />
                     <a href = 'https://github.com/ibrahimmabrouki'>github.com/ibrahimmabrouki</a>
                 </li>                
             </ul>

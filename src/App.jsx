@@ -20,7 +20,7 @@ function App() {
           <About/>
           <Experience/>
           <Project/>
-          <Contact/>
+          <Contact/> 
       </div>
 
     </>
