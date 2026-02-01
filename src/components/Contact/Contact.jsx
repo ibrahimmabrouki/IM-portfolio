@@ -1,8 +1,8 @@
 import React from "react";
 import styles from './Contact.module.css';
 import emailicon from "../../assets/contact/emailIcon.png";
-import linkedinicon from "../../assets/contact/linkedinicon.png";
-import githubicon from "../../assets/contact/githubicon.png";
+import linkedinicon from "../../assets/contact/linkedinIcon.png";
+import githubicon from "../../assets/contact/githubIcon.png";
 
 
 
