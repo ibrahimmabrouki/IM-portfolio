@@ -124,6 +124,39 @@
     z-index:0;
 }
 
+.buttonsContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.cvBtn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    text-decoration: none;
+    background-color: transparent;
+    color: var(--color-text);
+
+    border: 2px solid var(--color-primary);
+    border-radius: 100px;
+
+    font-size: 30px;
+    font-weight: 600;
+    padding: 17px 26px;
+
+    transition: all 0.3s ease;
+}
+
+.cvBtn:hover {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
 @media screen and (max-width: 830px) {
     .container{
         flex-direction: column-reverse;
@@ -135,8 +168,13 @@
         text-align: center;
     }
 
+    .description{
+        font-size: 30px;
+    }
+
     .title {
-        font-size: 42px;
+        margin-top: 5px;
+        font-size: 37px;
 
         /* keep typing effect */
         white-space: nowrap;
