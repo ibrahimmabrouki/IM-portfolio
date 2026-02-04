@@ -13,6 +13,8 @@ export function Contact(){
                 <h2 className={styles.title}>Contact</h2>
                 <p>Feel free to reach out!</p>
             </div>
+
+            <div className={styles.divtobecenterd}>
             <ul className={styles.links}>
                 <li className={styles.link}>
                     <img  src={emailicon} alt="Email Icon" />
@@ -27,6 +29,8 @@ export function Contact(){
                     <a href = 'https://github.com/ibrahimmabrouki'>github.com/ibrahimmabrouki</a>
                 </li>                
             </ul>
+            </div>
+            
         </footer>
     );
 }

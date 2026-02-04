@@ -98,7 +98,7 @@
 
 .historyItemDetails ul{
     margin-top: 6px;
-    list-style-position: inside;
+    list-style-position: outside;
     font-size: 25px;
     list-style-type: disc;
     margin-left: 17px;
@@ -131,6 +131,8 @@
     }
 
     .historyItem{
+        display: flex;
+        flex-direction: column;
         border-radius: 30px;
         background: linear-gradient(
         90deg,
@@ -139,6 +141,31 @@
         rgba(25, 55, 109, 0.8) 60%,
         rgba(25, 55, 109, 0) 100%
         );
+    }
 
+    .historyItemDetails h3{
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .historyItemDetails p{
+        text-align: center;
+        font-size: 20px;
+        color: grey;
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+
+    .historyItemDetails ul {
+        margin-top: 10px;
+        padding-left: 20px;      /* proper indentation */
+        list-style-position: outside;
+        text-align: left;        /* keep bullets clean */
+        font-size: 18px;
+        line-height: 1.6;
+    }
+    
+    .historyItemDetails li {
+        margin-bottom: 6px;
     }
 }
