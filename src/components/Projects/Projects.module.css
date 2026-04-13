@@ -1,89 +1,145 @@
-@import '../../vars.css';
+@import "../../vars.css";
 
-.container{
-    margin-top: 70px;
-    color: var(--color-text);
-    margin-left: 10%;
-    margin-right: 10%;
+.container {
+  margin-top: 69px;
+  color: var(--color-text);
+  margin-left: 5% !important;
+  margin-right: 5% !important;
 }
 
-.title{
-    padding-top: 30px;
-    font-size: 35px;
-    font-weight: 700;
-    letter-spacing: 1.75px;
-    text-transform: uppercase;
-    text-align: center;
+.title {
+  padding-top: 30px;
+  font-size: 35px;
+  text-align: center;
 }
 
-.sliderWrapper{
-    margin-top: 37px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+.carouselWrapper {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12%;
+  width: 100%;
 }
 
-.projects{
-    overflow: hidden;
-    width: 100%;
-    max-width: 900px;
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
-.sliderTrack{
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+.card {
+  position: absolute;
+  width: 350px;
+  cursor: pointer;
+  transition:
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.4s ease;
 }
 
-.slide{
-    min-width: 100%;
-    display: flex;
-    justify-content: center;
+/* NEXT (→) */
+.next .center {
+  transform: translateX(-140%) scale(0.85);
+  opacity: 0.5;
 }
 
-.arrow{
-    background: transparent;
-    border: 2px solid var(--color-text);
-    color: var(--color-text);
-    font-size: 22px;
-    padding: 8px 14px;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: all 0.3s ease;
+.next .right {
+  transform: translateX(-50%) scale(1.1);
+  opacity: 1;
 }
 
-.arrow:hover{
-    transform: scale(1.1);
+.next .left {
+  transform: translateX(-220%) scale(0.8);
+  opacity: 0;
 }
 
-.arrow:disabled{
-    opacity: 0.3;
-    cursor: not-allowed;
+/* PREV (←) */
+.prev .center {
+  transform: translateX(40%) scale(0.85);
+  opacity: 0.5;
 }
 
+.prev .left {
+  transform: translateX(-50%) scale(1.1);
+  opacity: 1;
+}
 
+.prev .right {
+  transform: translateX(140%) scale(0.8);
+  opacity: 0;
+}
+
+.center {
+  left: 50%;
+  transform: translateX(-50%) scale(1.1);
+  z-index: 3;
+  opacity: 1;
+}
+
+.left {
+  left: 50%;
+  transform: translateX(-140%) scale(0.85);
+  z-index: 2;
+  opacity: 0.5;
+}
+
+.right {
+  left: 50%;
+  transform: translateX(40%) scale(0.85);
+  z-index: 2;
+  opacity: 0.5;
+}
+
+.arrow {
+  background: transparent;
+  border: 2px solid var(--color-text);
+  color: var(--color-text);
+  font-size: 18px;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.arrow:hover {
+  transform: scale(1.15);
+}
+
+/* ================= MOBILE ================= */
 @media screen and (max-width: 830px) {
+  .carouselWrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
 
-    .sliderWrapper{
-        flex-direction: column;
+  @media screen and (max-width: 830px) {
+    .mobileArrow {
+      transform: rotate(90deg);
     }
 
-    .arrow{
-        display: none; 
+    .mobileArrow:hover {
+      transform: rotate(90deg) scale(1.15);
     }
+  }
+  .carousel {
+    position: static;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
 
-    .projects{
-        overflow: visible; 
-        max-width: 100%;
-    }
-
-    .sliderTrack{
-        flex-direction: column;
-        transform: none !important; 
-    }
-
-    .slide{
-        min-width: 100%;
-        margin-bottom: 20px;
-    }
+  .card {
+    position: static;
+    transform: none !important;
+    width: 100%;
+    max-width: 350px;
+    opacity: 1;
+  }
 }

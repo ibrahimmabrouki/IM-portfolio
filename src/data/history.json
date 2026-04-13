@@ -1,5 +1,23 @@
 [
   {
+    "role": "Full Stack Developer Intern",
+    "organisation": "The Digital Hub",
+    "startDate": "Jan, 2026",
+    "endDate": "Present",
+    "experiences": [
+      "Built a full-stack Learning Management System (LMS) using Node.js, Express, TypeScript, PostgreSQL, and Prisma, supporting courses, assignments, submissions, attendance, and notifications.",
+      "Designed secure authentication and authorization using JWT (access & refresh tokens) with role-based access control (RBAC).",
+      "Implemented file upload and remote storage with secure, controlled access to user documents.",
+      "Developed an AI-powered backend using a RAG system with modern ML models and vector databases.",
+      "Built intelligent features including an AI assistant and semantic search for enhanced data retrieval.",
+      "Developed a full-stack Next.js and MongoDB platform with a public site and admin dashboard, including session-based authentication and dynamic RBAC UI.",
+      "Built an Angular e-commerce application using standalone components and NgRx Signals with centralized state management and local persistence.",
+      "Applied SOLID principles and design patterns within an Agile team to deliver scalable and maintainable solutions."
+    ],
+    "imageSrc": "history/digitalhub.png"
+  },
+
+  {
     "role": "SAP S/4HANA Intern",
     "organisation": "Sword Group",
     "startDate": "Sept, 2025",

@@ -1,61 +1,26 @@
 @import '../../vars.css';
 
-.container{
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    background: linear-gradient(180deg, #576cbc 0%, #132153 100%);
-    box-shadow: 0 16px 14px 0 #04152d;
-    padding: 18px 24px;
-    max-width: 500px;
+.previewCard {
+    cursor: pointer;
+    border-radius: 14px;
+    overflow: hidden;
+    background: linear-gradient(180deg, #576cbc, #132153);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
 }
 
-.image{
-    margin-bottom: 26px;
+.previewCard:hover {
+    transform: scale(1.05);
 }
 
-.title{
-    font-size: 25px;
-    font-weight: 700;
-}
-
-.description{
-    margin-top: 6px;
-    font-size: 25px;
-    font-weight: 400;
-}
-
-.skills{
+.previewImage {
     width: 100%;
-    margin-top: 14px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 6px;
-    list-style: none;
+    height: 150px;
+    object-fit: cover;
 }
 
-.skill{
-    font-size: 25px;
-    font-weight: 400;
-    border-radius: 100px;
-    background: var(--color-dark);
-    padding: 2px 22px;
-}
-
-.links{
-    width: 100%;
-    margin-top: 26px;
-    display: flex;
-    justify-content: space-around;
-}
-
-.link{
-    text-decoration: none;
-    color: var(--color-text);
-    font-size: 30px;
-    font-weight: 600;
-    border-radius: 100px;
-    background: var(--color-primary);
-    padding: 1px 22px;
+.previewTitle {
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
 }

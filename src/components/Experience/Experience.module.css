@@ -1,171 +1,218 @@
 @import "../../vars.css";
 
-.container{
-    color: var(--color-text);
-    margin-top: 79px;
-    margin-right: 10%;
-    margin-left: 10%;
-    display: flex;
-    flex-direction: column;
+.container {
+  color: var(--color-text);
+  margin-top: 79px;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
-.title{
-    color: var(--color-text);
-    font-size: 35px;
-    font-weight: 700;
-    letter-spacing: 1.75px;
-    text-transform: uppercase;
+.title {
+  color: var(--color-text);
+  font-size: 35px;
+  font-weight: 700;
+  letter-spacing: 1.75px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 50px;
 }
 
-.content{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-top: 40px;
+.timeline {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }
 
-.skills{
-    width: 45%;
-    display: flex;
-    flex-wrap: wrap; /*which means if the items are going out side the width 
-                        move them to the next row*/
-    flex-direction: row;
-    gap: 11px;
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(25, 55, 109, 0.2),
+    rgba(25, 55, 109, 1),
+    rgba(25, 55, 109, 0.2)
+  );
+  border-radius: 10px;
 }
 
-.skill{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 11px;
+.timelineItem {
+  position: relative;
+  width: 50%;
+  display: flex;
 }
 
-.skillImageContainer{
-    background-color: var(--color-secondary);
-    border-radius: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 120px;
-    height: 120px;
+.right {
+  justify-content: flex-start;
+  align-self: flex-end;
+  padding-left: 40px;
 }
 
-.skillImageContainer img{
-    width: 75px;
+.left {
+  justify-content: flex-end;
+  align-self: flex-start;
+  padding-right: 40px;
 }
 
-.skill p{
-    font-size: 25px;
-    font-family: var(--font-roboto);
-    font-weight: 500;
+.timelineDot {
+  position: absolute;
+  top: 35px;
+  width: 18px;
+  height: 18px;
+  background-color: var(--color-secondary);
+  border: 4px solid #19376d;
+  border-radius: 50%;
+  z-index: 2;
 }
 
-.history{
-    width: 45%;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+.right .timelineDot {
+  left: -9px;
 }
 
-.historyItem{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 17px;
-    background: #19376d;
-    background: linear-gradient(90deg, #19376d 0%, rgba(25, 55, 109, 0) 100%);
-    border-radius: 10px;
-    padding: 24px;
+.left .timelineDot {
+  right: -9px;
 }
 
-.historyItem img{
-    width: 50px;
+.historyItem {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(25, 55, 109, 0.95),
+    rgba(15, 30, 60, 0.95)
+  );
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-.historyItemDetails{
-    font-family: var(--font-roboto);
+.historyItem:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
 }
 
-.historyItemDetails h3{
-    font-size: 30px;
-    font-weight: 500;
+.historyImage {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 8px;
 }
 
-.historyItemDetails p{
-    font-size: 20px;
-    font-weight: 300;
+.historyItemDetails {
+  font-family: var(--font-roboto);
+  flex: 1;
 }
 
-.historyItemDetails ul{
-    margin-top: 6px;
-    list-style-position: outside;
-    font-size: 25px;
-    list-style-type: disc;
-    margin-left: 17px;
+.historyItemDetails h3 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.historyItemDetails p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #b8c7e0;
+  margin-bottom: 14px;
+}
+
+.historyItemDetails ul {
+  margin-top: 8px;
+  padding-left: 20px;
+  list-style-position: outside;
+  list-style-type: disc;
+}
+
+.historyItemDetails li {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 8px;
 }
 
 @media screen and (max-width: 830px) {
+  .container {
+    margin-top: 30px;
+  }
 
-    .container{
-        margin-top: 10px;
-    }
-    .content{
-        flex-direction: column;
-        align-items: center;
-        gap:34px;
-    }
+  .title {
+    font-size: 30px;
+    margin-bottom: 35px;
+  }
 
-    .skills{
-        width: 100%;
-        flex-direction: row;
-        justify-content: center;
-    }
+  .timeline::before {
+    left: 20px;
+    transform: none;
+  }
 
-    .title{
-        text-align: center;
-    }
+  .timelineItem {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 0;
+    justify-content: flex-start;
+    align-self: flex-start;
+  }
 
-    .history{
-        width: 100%;
-        gap:9px
-    }
+  .right,
+  .left {
+    padding-left: 50px;
+    padding-right: 0;
+  }
 
-    .historyItem{
-        display: flex;
-        flex-direction: column;
-        border-radius: 30px;
-        background: linear-gradient(
-        90deg,
-        rgba(25, 55, 109, 0) 0%,
-        rgba(25, 55, 109, 0.8) 40%,
-        rgba(25, 55, 109, 0.8) 60%,
-        rgba(25, 55, 109, 0) 100%
-        );
-    }
+  .timelineDot {
+    left: 11px !important;
+    right: auto !important;
+    top: 30px;
+    width: 16px;
+    height: 16px;
+  }
 
-    .historyItemDetails h3{
-        text-align: center;
-        font-size: 25px;
-    }
+  .historyItem {
+    flex-direction: column;
+    gap: 16px;
+    padding: 22px;
+    border-radius: 18px;
+  }
 
-    .historyItemDetails p{
-        text-align: center;
-        font-size: 20px;
-        color: grey;
-        margin-top: 3px;
-        margin-bottom: 3px;
-    }
+  .historyImage {
+    width: 55px;
+    height: 55px;
+  }
 
-    .historyItemDetails ul {
-        margin-top: 10px;
-        padding-left: 20px;      /* proper indentation */
-        list-style-position: outside;
-        text-align: left;        /* keep bullets clean */
-        font-size: 18px;
-        line-height: 1.6;
-    }
-    
-    .historyItemDetails li {
-        margin-bottom: 6px;
-    }
+  .historyItemDetails h3 {
+    font-size: 22px;
+    text-align: left;
+  }
+
+  .historyItemDetails p {
+    font-size: 17px;
+    text-align: left;
+    margin-top: 4px;
+    margin-bottom: 10px;
+  }
+
+  .historyItemDetails ul {
+    font-size: 16px;
+    line-height: 1.6;
+    padding-left: 18px;
+  }
+
+  .historyItemDetails li {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
 }

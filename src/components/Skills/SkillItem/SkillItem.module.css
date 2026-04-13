@@ -1,0 +1,85 @@
+@import "../../../vars.css";
+
+.skillItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.3s ease;
+}
+
+.skillImageContainer {
+  background: linear-gradient(145deg, #96b5dd, #1f1f1f);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+
+  box-shadow: 
+    6px 6px 12px rgba(0, 0, 0, 0.4),
+    -4px -4px 10px rgba(255, 255, 255, 0.05),
+    inset 0 0 8px rgba(255, 255, 255, 0.05);
+
+  transition: all 0.3s ease;
+  transform: perspective(600px) translateZ(0);
+}
+
+.skillImageContainer img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.skillItem:hover {
+  transform: translateY(-6px);
+}
+
+.skillItem:hover .skillImageContainer {
+  transform: perspective(600px) translateZ(15px) scale(1.05);
+  box-shadow: 
+    10px 10px 20px rgba(0, 0, 0, 0.5),
+    -6px -6px 14px rgba(255, 255, 255, 0.08),
+    inset 0 0 10px rgba(255, 255, 255, 0.08);
+}
+
+.skillItem:hover .skillImageContainer img {
+  transform: scale(1.1) rotate(5deg);
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.4));
+}
+
+.skillItem:hover .skillImageContainer {
+  background: linear-gradient(145deg, #2f2f2f, #242424);
+}
+
+.skillTitle {
+  font-size: 14px;
+  font-family: var(--font-roboto);
+  font-weight: 500;
+  color: var(--color-text);
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.skillItem:hover .skillTitle {
+  color: #00d8ff; 
+}
+
+@media screen and (max-width: 830px) {
+  .skillImageContainer {
+    width: 50px;
+    height: 50px;
+  }
+
+  .skillImageContainer img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .skillTitle {
+    font-size: 12px;
+  }
+}

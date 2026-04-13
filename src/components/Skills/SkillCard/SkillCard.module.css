@@ -1,0 +1,76 @@
+@import "../../../vars.css";
+
+.skillCardContainer {
+  background: linear-gradient(135deg, #19376d 0%, rgba(25, 55, 109, 0.4) 100%);
+  border-radius: 10px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.cardHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.categoryImageContainer {
+  background-color: rgb(226, 228, 242);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+}
+
+.categoryImage {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.categoryTitle {
+  color: var(--color-text);
+  font-size: 22px;
+  font-weight: 500;
+  font-family: var(--font-roboto);
+  letter-spacing: 0.5px;
+}
+
+.skillsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 11px;
+}
+
+@media screen and (max-width: 830px) {
+  .skillCardContainer {
+    border-radius: 30px;
+    background: linear-gradient(
+      90deg,
+      rgba(25, 55, 109, 0) 0%,
+      rgba(25, 55, 109, 0.8) 40%,
+      rgba(25, 55, 109, 0.8) 60%,
+      rgba(25, 55, 109, 0) 100%
+    );
+  }
+
+  .cardHeader {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .categoryTitle {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .skillsContainer {
+    justify-content: center;
+  }
+}
