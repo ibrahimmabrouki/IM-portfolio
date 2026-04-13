@@ -1,66 +1,94 @@
 import React, { useState } from "react";
-import projects from '../../data/projects.json';
+import projects from "../../data/projects.json";
 import { ProjectCard } from "./ProjectCard";
-import styles from './Projects.module.css';
+import { ProjectModal } from "./ProjectModal";
+import styles from "./Projects.module.css";
 
 export function Project() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [direction, setDirection] = useState("");
 
-    const [currentIndex, setCurrentIndex] = useState(0);
+  const getIndex = (index) => {
+    return (index + projects.length) % projects.length;
+  };
 
-    const nextProject = () => {
-        if (currentIndex < projects.length - 1) {
-            setCurrentIndex(currentIndex + 1);
-        }
-    };
+  const nextProject = () => {
+    if (isAnimating) return;
 
-    const prevProject = () => {
-        if (currentIndex > 0) {
-            setCurrentIndex(currentIndex - 1);
-        }
-    };
+    setDirection("next");
+    setIsAnimating(true);
 
-    return (
-        <section className={styles.container} id="projects">
+    setTimeout(() => {
+      setCurrentIndex((prev) => getIndex(prev + 1));
+      setIsAnimating(false);
+      setDirection("");
+    }, 500);
+  };
 
-            <h2 className={styles.title}>Projects</h2>
+  const prevProject = () => {
+    if (isAnimating) return;
 
-            <div className={styles.sliderWrapper}>
+    setDirection("prev");
+    setIsAnimating(true);
 
-                <button 
-                    className={styles.arrow} 
-                    onClick={prevProject}
-                    disabled={currentIndex === 0}
-                >
-                    ◀
-                </button>
+    setTimeout(() => {
+      setCurrentIndex((prev) => getIndex(prev - 1));
+      setIsAnimating(false);
+      setDirection("");
+    }, 500);
+  };
 
-                <div className={styles.projects}>
-                    <div
-                        className={styles.sliderTrack}
-                        style={{
-                            transform: `translateX(-${currentIndex * 100}%)`
-                        }}
-                    >
-                        {projects.map((project, id) => (
-                            <div key={id} className={styles.slide}>
-                                <ProjectCard project={project} />
-                            </div>
-                        ))}
-                    </div>
-                </div>
+  const leftIndex = getIndex(currentIndex - 1);
+  const rightIndex = getIndex(currentIndex + 1);
 
-                <button 
-                    className={styles.arrow} 
-                    onClick={nextProject}
-                    disabled={currentIndex === projects.length - 1}
-                >
-                    ▶
-                </button>
+  return (
+    <section className={styles.container} id="projects">
+      <h2 className={styles.title}>Projects</h2>
 
-            </div>
+      <div className={styles.carouselWrapper}>
+        <button
+          className={`${styles.arrow} ${styles.mobileArrow}`}
+          onClick={prevProject}
+        >
+          ◀
+        </button>
 
-        </section>
-    );
+        <div
+          className={`${styles.carousel} ${
+            isAnimating ? styles[direction] : ""
+          }`}
+
+          onClick={() => setSelectedProject(projects[currentIndex])}
+        >
+          <div className={`${styles.card} ${styles.left}`}>
+            <ProjectCard project={projects[leftIndex]} />
+          </div>
+
+          <div className={`${styles.card} ${styles.center}`}>
+            <ProjectCard project={projects[currentIndex]} />
+          </div>
+
+          <div className={`${styles.card} ${styles.right}`}>
+            <ProjectCard project={projects[rightIndex]} />
+          </div>
+        </div>
+
+        <button
+          className={`${styles.arrow} ${styles.mobileArrow}`}
+          onClick={nextProject}
+        >
+          ▶
+        </button>
+      </div>
+
+      {selectedProject && (
+        <ProjectModal
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+      )}
+    </section>
+  );
 }
-
-
